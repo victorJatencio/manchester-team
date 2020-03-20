@@ -5,11 +5,14 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/home";
 import SignIn from "./components/signin";
 
+import Dashboard from "./components/admin/Dashboard";
+
 const Routes = props => {
   return (
     <div>
       <Layout>
         <Switch>
+          <Route exact component={Dashboard} path="/dashboard" />
           <Route exact component={SignIn} path="/sign_in" />
           <Route exact component={Home} path="/" />
         </Switch>
